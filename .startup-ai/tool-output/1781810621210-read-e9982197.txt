@@ -1,0 +1,110 @@
+<path requested="src/data/siteContent.ts" resolved="src/data/siteContent.ts"></path>
+<type>file</type>
+<content>
+  1| export const siteContent = {
+  2|   appName: "Line & Hue",
+  3|   tagline: "Custom art commissions, drawn for you.",
+  4|   description:
+  5|     "I bring your ideas to life with hand-drawn digital illustrations — from character portraits to custom scenes, each piece crafted one line at a time.",
+  6|   primaryCta: "Book a commission",
+  7|   secondaryCta: "See my work",
+  8| 
+  9|   artist: {
+ 10|     name: "Morgan Vale",
+ 11|     title: "Illustrator & character artist",
+ 12|     bio: "With over eight years of experience in digital illustration, I specialize in character art, fantasy scenes, and custom portrait work. Every commission begins with a conversation — because the best art starts with understanding what matters to you.",
+ 13|     avatar: "",
+ 14|     location: "Portland, OR",
+ 15|   },
+ 16| 
+ 17|   packages: [
+ 18|     {
+ 19|       id: "sketch",
+ 20|       name: "Sketch",
+ 21|       price: 45,
+ 22|       currency: "USD",
+ 23|       description: "Loose, expressive black-and-white sketch — perfect for quick ideas.",
+ 24|       delivery: "3–5 days",
+ 25|       size: "Up to 2400 px",
+ 26|       revisions: 1,
+ 27|       features: ["Clean digital scan", "Grayscale only", "Commercial use"],
+ 28|     },
+ 29|     {
+ 30|       id: "standard",
+ 31|       name: "Standard",
+ 32|       price: 95,
+ 33|       currency: "USD",
+ 34|       description: "Full-resolution illustration with flat color and polished linework.",
+ 35|       delivery: "5–10 days",
+ 36|       size: "Up to 4800 px",
+ 37|       revisions: 2,
+ 38|       features: ["Flat color + shading", "Full commercial rights", "Source files included", "Transparent PNG"],
+ 39|       popular: true,
+ 40|     },
+ 41|     {
+ 42|       id: "premium",
+ 43|       name: "Premium",
+ 44|       price: 195,
+ 45|       currency: "USD",
+ 46|       description: "A fully rendered piece with rich color, lighting, and background.",
+ 47|       delivery: "10–14 days",
+ 48|       size: "Up to 6000 px",
+ 49|       revisions: 3,
+ 50|       features: [
+ 51|         "Full color + atmospheric lighting",
+ 52|         "Detailed background",
+ 53|         "Commercial rights + licensing",
+ 54|         "Source files + layered PSD",
+ 55|         "Timelapse video included",
+ 56|       ],
+ 57|     },
+ 58|   ],
+ 59| 
+ 60|   process: [
+ 61|     {
+ 62|       step: 1,
+ 63|       title: "Consultation",
+ 64|       description:
+ 65|         "Tell me about your idea — characters, mood, references, and any details that matter. I'll ask the right questions to make sure we're aligned.",
+ 66|     },
+ 67|     {
+ 68|       step: 2,
+ 69|       title: "Sketch approval",
+ 70|       description:
+ 71|         "I'll send rough sketches for your feedback. You pick the direction, and I refine until it feels right.",
+ 72|     },
+ 73|     {
+ 74|       step: 3,
+ 75|       title: "Final art",
+ 76|       description:
+ 77|         "Once the sketch is locked, I complete the full illustration. You get the final files and full usage rights.",
+ 78|     },
+ 79|   ],
+ 80| 
+ 81|   faq: [
+ 82|     {
+ 83|       q: "What kind of art do you draw?",
+ 84|       a: "I specialize in character art, fantasy landscapes, pet portraits, and custom illustrations. If you're unsure whether your idea fits, just reach out — I'm always open to creative challenges.",
+ 85|     },
+ 86|     {
+ 87|       q: "How do I receive my commission?",
+ 88|       a: "You'll get high-resolution digital files delivered via email. Standard delivery includes PNG; Premium includes layered source files as well.",
+ 89|     },
+ 90|     {
+ 91|       q: "What about commercial usage?",
+ 92|       a: "All packages include commercial use rights. Premium adds extended licensing for merchandise, publishing, or branding purposes.",
+ 93|     },
+ 94|     {
+ 95|       q: "Can I request revisions after the final delivery?",
+ 96|       a: "Each package includes a set number of revision rounds during the sketch phase. Minor color tweaks after final delivery are complimentary; major reworks are quoted separately.",
+ 97|     },
+ 98|     {
+ 99|       q: "How do I pay?",
+100|       a: "I accept payments through secure invoicing. A 50% deposit is required to start, with the remainder due upon final delivery.",
+101|     },
+102|   ],
+103| };
+104| 
+
+[End of file: 104 lines]
+</content>

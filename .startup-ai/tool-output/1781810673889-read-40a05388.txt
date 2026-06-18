@@ -1,0 +1,86 @@
+<path requested="src/pages/Index.tsx" resolved="src/pages/Index.tsx"></path>
+<type>file</type>
+<content>
+153|                 <Card
+154|                   key={pkg.id}
+155|                   className={`relative flex flex-col transition-all duration-300 ${
+156|                     pkg.popular
+157|                       ? "border-brand/50 shadow-lg shadow-brand/5"
+158|                       : "hover:border-border/80 hover:shadow-md"
+159|                   }`}
+160|                 >
+161|                   {pkg.popular && (
+162|                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+163|                       <Badge className="bg-brand text-brand-foreground hover:bg-brand/90">
+164|                         Most popular
+165|                       </Badge>
+166|                     </div>
+167|                   )}
+168|                   <CardHeader>
+169|                     <CardTitle className="font-serif text-xl">{pkg.name}</CardTitle>
+170|                     <CardDescription className="text-sm">{pkg.description}</CardDescription>
+171|                     <div className="mt-3">
+172|                       <span className="font-serif text-4xl font-bold tracking-tight">
+173|                         ${pkg.price}
+174|                       </span>
+175|                     </div>
+176|                   </CardHeader>
+177|                   <CardContent className="flex-1 space-y-3">
+178|                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
+179|                       <Clock className="h-4 w-4" />
+180|                       <span>{pkg.delivery}</span>
+181|                     </div>
+182|                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
+183|                       <svg
+184|                         width="16"
+185|                         height="16"
+186|                         viewBox="0 0 24 24"
+187|                         fill="none"
+188|                         stroke="currentColor"
+189|                         strokeWidth="2"
+190|                         className="shrink-0"
+191|                       >
+192|                         <rect x="3" y="3" width="18" height="18" rx="2" />
+193|                         <circle cx="8.5" cy="8.5" r="1.5" />
+194|                         <path d="M21 15l-5-5L5 21" />
+195|                       </svg>
+196|                       <span>{pkg.size}</span>
+197|                     </div>
+198|                     <Separator />
+199|                     <ul className="space-y-2">
+200|                       {pkg.features.map((f) => (
+201|                         <li key={f} className="flex items-start gap-2 text-sm">
+202|                           <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+203|                           <span>{f}</span>
+204|                         </li>
+205|                       ))}
+206|                     </ul>
+207|                   </CardContent>
+208|                   <CardFooter>
+209|                     <Button
+210|                       variant={pkg.popular ? "default" : "outline"}
+211|                       className="w-full"
+212|                       onClick={() => {
+213|                         setSelected(pkg.id);
+214|                         setTimeout(() => {
+215|                           document
+216|                             .getElementById("inquiry")
+217|                             ?.scrollIntoView({ behavior: "smooth" });
+218|                         }, 100);
+219|                       }}
+220|                     >
+221|                       Select {pkg.name}
+222|                     </Button>
+223|                   </CardFooter>
+224|                 </Card>
+225|               ))}
+226|             </div>
+227|           </div>
+228|         </section>
+229| 
+230|         {/* ─── Process ─── */}
+231|         <section id="process" className="scroll-mt-24 border-b border-border/40 bg-muted/20">
+232|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+
+[Showing lines 153-232 of 413. Use offset=232 to continue.]
+</content>

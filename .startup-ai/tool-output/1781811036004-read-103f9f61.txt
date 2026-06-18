@@ -1,0 +1,243 @@
+<path requested="src/pages/Index.tsx" resolved="src/pages/Index.tsx"></path>
+<type>file</type>
+<content>
+  1| import { siteContent } from "../data/siteContent";
+  2| import { Button } from "../components/ui/button";
+  3| import { Badge } from "../components/ui/badge";
+  4| import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../components/ui/card";
+  5| import { Input } from "../components/ui/input";
+  6| import { Textarea } from "../components/ui/textarea";
+  7| import { Label } from "../components/ui/label";
+  8| import { Separator } from "../components/ui/separator";
+  9| import { Check, Sparkles, Palette, ArrowRight, Clock, Shield } from "lucide-react";
+ 10| import { useState } from "react";
+ 11| import { toast } from "sonner";
+ 12| 
+ 13| type PackageId = (typeof siteContent.packages)[number]["id"];
+ 14| 
+ 15| const stepIcons = [Sparkles, Palette, ArrowRight] as const;
+ 16| 
+ 17| export default function Index() {
+ 18|   const [selected, setSelected] = useState<PackageId | null>(null);
+ 19|   const [form, setForm] = useState({ name: "", email: "", details: "" });
+ 20|   const [sending, setSending] = useState(false);
+ 21| 
+ 22|   const handleSubmit = (e: React.FormEvent) => {
+ 23|     e.preventDefault();
+ 24|     if (!form.name || !form.email) {
+ 25|       toast.error("Please fill in your name and email.");
+ 26|       return;
+ 27|     }
+ 28|     setSending(true);
+ 29|     // Simulate submission — real backend would go here
+ 30|     setTimeout(() => {
+ 31|       toast.success("Inquiry sent! I'll be in touch within 24 hours.");
+ 32|       setSending(false);
+ 33|       setForm({ name: "", email: "", details: "" });
+ 34|       setSelected(null);
+ 35|     }, 1200);
+ 36|   };
+ 37| 
+ 38|   return (
+ 39|     <div className="min-h-screen bg-background text-foreground">
+ 40|       {/* ─── Header ─── */}
+ 41|       <header className="sticky top-0 z-40 border-b border-border/40 bg-background/80 backdrop-blur-md">
+ 42|         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+ 43|           <span className="font-serif text-xl font-semibold tracking-tight">
+ 44|             {siteContent.appName}
+ 45|           </span>
+ 46|           <nav className="hidden items-center gap-6 text-sm text-muted-foreground sm:flex">
+ 47|             <a href="#packages" className="transition-colors hover:text-foreground">
+ 48|               Packages
+ 49|             </a>
+ 50|             <a href="#process" className="transition-colors hover:text-foreground">
+ 51|               Process
+ 52|             </a>
+ 53|             <a href="#faq" className="transition-colors hover:text-foreground">
+ 54|               FAQ
+ 55|             </a>
+ 56|             <a href="#inquiry" className="transition-colors hover:text-foreground">
+ 57|               Contact
+ 58|             </a>
+ 59|           </nav>
+ 60|           <Button size="sm" className="hidden sm:inline-flex" asChild>
+ 61|             <a href="#inquiry">{siteContent.primaryCta}</a>
+ 62|           </Button>
+ 63|           {/* Mobile menu trigger — kept minimal for first build */}
+ 64|           <Button size="icon" variant="ghost" className="sm:hidden" aria-label="Menu">
+ 65|             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
+ 66|               <line x1="3" y1="6" x2="17" y2="6" />
+ 67|               <line x1="3" y1="10" x2="17" y2="10" />
+ 68|               <line x1="3" y1="14" x2="17" y2="14" />
+ 69|             </svg>
+ 70|           </Button>
+ 71|         </div>
+ 72|       </header>
+ 73| 
+ 74|       <main>
+ 75|         {/* ─── Hero ─── */}
+ 76|         <section className="relative overflow-hidden border-b border-border/40">
+ 77|           {/* Decorative blobs */}
+ 78|           <div
+ 79|             aria-hidden="true"
+ 80|             className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-brand/5 blur-3xl"
+ 81|           />
+ 82|           <div
+ 83|             aria-hidden="true"
+ 84|             className="pointer-events-none absolute -bottom-48 left-1/3 h-[400px] w-[400px] rounded-full bg-brand/5 blur-3xl"
+ 85|           />
+ 86| 
+ 87|           <div className="mx-auto max-w-6xl px-6 pb-24 pt-24 md:pb-32 md:pt-32">
+ 88|             <div className="mx-auto max-w-3xl text-center">
+ 89|               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+ 90|                 <Clock className="h-3.5 w-3.5" />
+ 91|                 <span>Accepting limited commissions through March</span>
+ 92|               </div>
+ 93|               <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+ 94|                 {siteContent.tagline}
+ 95|               </h1>
+ 96|               <p className="mt-6 text-balance text-base leading-relaxed text-muted-foreground md:text-lg">
+ 97|                 {siteContent.description}
+ 98|               </p>
+ 99|               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+100|                 <Button size="lg" className="w-full sm:w-auto" asChild>
+101|                   <a href="#packages">
+102|                     {siteContent.primaryCta}
+103|                     <ArrowRight className="ml-2 h-4 w-4" />
+104|                   </a>
+105|                 </Button>
+106|                 <Button size="lg" variant="outline" className="w-full sm:w-auto">
+107|                   {siteContent.secondaryCta}
+108|                 </Button>
+109|               </div>
+110|               <p className="mt-8 text-xs text-muted-foreground">
+111|                 <Shield className="mr-1 inline-block h-3 w-3" />
+112|                 Secure payment &middot; Satisfaction guaranteed &middot; Full commercial rights
+113|               </p>
+114|             </div>
+115|           </div>
+116|         </section>
+117| 
+118|         {/* ─── Artist intro ─── */}
+119|         <section className="border-b border-border/40 bg-muted/20">
+120|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+121|             <div className="mx-auto max-w-2xl text-center">
+122|               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand/10">
+123|                 <Palette className="h-7 w-7 text-brand" />
+124|               </div>
+125|               <h2 className="font-serif text-2xl font-semibold tracking-tight md:text-3xl">
+126|                 Hi, I'm {siteContent.artist.name}
+127|               </h2>
+128|               <p className="mt-1 text-sm text-muted-foreground">{siteContent.artist.title}</p>
+129|               <p className="mt-5 text-balance leading-relaxed text-muted-foreground">
+130|                 {siteContent.artist.bio}
+131|               </p>
+132|               <p className="mt-4 text-xs text-muted-foreground">Based in {siteContent.artist.location}</p>
+133|             </div>
+134|           </div>
+135|         </section>
+136| 
+137|         {/* ─── Packages ─── */}
+138|         <section id="packages" className="scroll-mt-24 border-b border-border/40">
+139|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+140|             <div className="mx-auto mb-14 max-w-xl text-center">
+141|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+142|                 Pricing
+143|               </Badge>
+144|               <h2 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+145|                 Commission packages
+146|               </h2>
+147|               <p className="mt-3 text-muted-foreground">
+148|                 Choose the tier that fits your project. All prices in {siteContent.packages[0].currency}.
+149|               </p>
+150|             </div>
+151|             <div className="grid gap-6 md:grid-cols-3">
+152|               {siteContent.packages.map((pkg) => (
+153|                 <Card
+154|                   key={pkg.id}
+155|                   className={`relative flex flex-col transition-all duration-300 ${
+156|                     pkg.popular
+157|                       ? "border-brand/50 shadow-lg shadow-brand/5"
+158|                       : "hover:border-border/80 hover:shadow-md"
+159|                   }`}
+160|                 >
+161|                   {pkg.popular && (
+162|                     <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+163|                       <Badge className="bg-brand text-brand-foreground hover:bg-brand/90">
+164|                         Most popular
+165|                       </Badge>
+166|                     </div>
+167|                   )}
+168|                   <CardHeader>
+169|                     <CardTitle className="font-serif text-xl">{pkg.name}</CardTitle>
+170|                     <CardDescription className="text-sm">{pkg.description}</CardDescription>
+171|                     <div className="mt-3">
+172|                       <span className="font-serif text-4xl font-bold tracking-tight">
+173|                         ${pkg.price}
+174|                       </span>
+175|                     </div>
+176|                   </CardHeader>
+177|                   <CardContent className="flex-1 space-y-3">
+178|                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
+179|                       <Clock className="h-4 w-4" />
+180|                       <span>{pkg.delivery}</span>
+181|                     </div>
+182|                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
+183|                       <svg
+184|                         width="16"
+185|                         height="16"
+186|                         viewBox="0 0 24 24"
+187|                         fill="none"
+188|                         stroke="currentColor"
+189|                         strokeWidth="2"
+190|                         className="shrink-0"
+191|                       >
+192|                         <rect x="3" y="3" width="18" height="18" rx="2" />
+193|                         <circle cx="8.5" cy="8.5" r="1.5" />
+194|                         <path d="M21 15l-5-5L5 21" />
+195|                       </svg>
+196|                       <span>{pkg.size}</span>
+197|                     </div>
+198|                     <Separator />
+199|                     <ul className="space-y-2">
+200|                       {pkg.features.map((f) => (
+201|                         <li key={f} className="flex items-start gap-2 text-sm">
+202|                           <Check className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+203|                           <span>{f}</span>
+204|                         </li>
+205|                       ))}
+206|                     </ul>
+207|                   </CardContent>
+208|                   <CardFooter>
+209|                     <Button
+210|                       variant={pkg.popular ? "default" : "outline"}
+211|                       className="w-full"
+212|                       onClick={() => {
+213|                         setSelected(pkg.id);
+214|                         setTimeout(() => {
+215|                           document
+216|                             .getElementById("inquiry")
+217|                             ?.scrollIntoView({ behavior: "smooth" });
+218|                         }, 100);
+219|                       }}
+220|                     >
+221|                       Select {pkg.name}
+222|                     </Button>
+223|                   </CardFooter>
+224|                 </Card>
+225|               ))}
+226|             </div>
+227|           </div>
+228|         </section>
+229| 
+230|         {/* ─── Process ─── */}
+231|         <section id="process" className="scroll-mt-24 border-b border-border/40 bg-muted/20">
+232|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+233|             <div className="mx-auto mb-14 max-w-xl text-center">
+234|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+235|                 How it works
+236|               </Badge>
+237| 
+
+[Output truncated: 8441 chars omitted]
+</content>

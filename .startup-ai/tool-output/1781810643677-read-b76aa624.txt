@@ -1,0 +1,82 @@
+<path requested="tailwind.config.js" resolved="tailwind.config.js"></path>
+<type>file</type>
+<content>
+ 1| import tailwindcssAnimate from "tailwindcss-animate";
+ 2| 
+ 3| /** @type {import('tailwindcss').Config} */
+ 4| const config = {
+ 5|   darkMode: ["class"],
+ 6|   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+ 7|   theme: {
+ 8|     extend: {
+ 9|       borderRadius: {
+10|         lg: "var(--radius)",
+11|         md: "calc(var(--radius) - 2px)",
+12|         sm: "calc(var(--radius) - 4px)",
+13|       },
+14|       colors: {
+15|         background: "hsl(var(--background) / <alpha-value>)",
+16|         foreground: "hsl(var(--foreground) / <alpha-value>)",
+17|         card: {
+18|           DEFAULT: "hsl(var(--card) / <alpha-value>)",
+19|           foreground: "hsl(var(--card-foreground) / <alpha-value>)",
+20|         },
+21|         popover: {
+22|           DEFAULT: "hsl(var(--popover) / <alpha-value>)",
+23|           foreground: "hsl(var(--popover-foreground) / <alpha-value>)",
+24|         },
+25|         primary: {
+26|           DEFAULT: "hsl(var(--primary) / <alpha-value>)",
+27|           foreground: "hsl(var(--primary-foreground) / <alpha-value>)",
+28|         },
+29|         secondary: {
+30|           DEFAULT: "hsl(var(--secondary) / <alpha-value>)",
+31|           foreground: "hsl(var(--secondary-foreground) / <alpha-value>)",
+32|         },
+33|         muted: {
+34|           DEFAULT: "hsl(var(--muted) / <alpha-value>)",
+35|           foreground: "hsl(var(--muted-foreground) / <alpha-value>)",
+36|         },
+37|         accent: {
+38|           DEFAULT: "hsl(var(--accent) / <alpha-value>)",
+39|           foreground: "hsl(var(--accent-foreground) / <alpha-value>)",
+40|         },
+41|         destructive: {
+42|           DEFAULT: "hsl(var(--destructive) / <alpha-value>)",
+43|           foreground: "hsl(var(--destructive-foreground) / <alpha-value>)",
+44|         },
+45|         border: "hsl(var(--border) / <alpha-value>)",
+46|         input: "hsl(var(--input) / <alpha-value>)",
+47|         ring: "hsl(var(--ring) / <alpha-value>)",
+48|         brand: {
+49|           DEFAULT: "hsl(15 55% 55% / <alpha-value>)",
+50|           foreground: "hsl(0 0% 98% / <alpha-value>)",
+51|         },
+52|       },
+53|       keyframes: {
+54|         "accordion-down": {
+55|           from: { height: "0" },
+56|           to: { height: "var(--radix-accordion-content-height)" },
+57|         },
+58|         "accordion-up": {
+59|           from: { height: "var(--radix-accordion-content-height)" },
+60|           to: { height: "0" },
+61|         },
+62|       },
+63|       animation: {
+64|         "accordion-down": "accordion-down 0.2s ease-out",
+65|         "accordion-up": "accordion-up 0.2s ease-out",
+66|       },
+67|       boxShadow: {
+68|         soft: "0 18px 60px -30px rgba(15, 23, 42, 0.35)",
+69|       },
+70|     },
+71|   },
+72|   plugins: [tailwindcssAnimate],
+73| };
+74| 
+75| export default config;
+76| 
+
+[End of file: 76 lines]
+</content>

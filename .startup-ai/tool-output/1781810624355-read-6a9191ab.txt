@@ -1,0 +1,189 @@
+<path requested="src/pages/Index.tsx" resolved="src/pages/Index.tsx"></path>
+<type>file</type>
+<content>
+231|         <section id="process" className="scroll-mt-24 border-b border-border/40 bg-muted/20">
+232|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+233|             <div className="mx-auto mb-14 max-w-xl text-center">
+234|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+235|                 How it works
+236|               </Badge>
+237|               <h2 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+238|                 From idea to artwork
+239|               </h2>
+240|               <p className="mt-3 text-muted-foreground">
+241|                 A simple three-step process designed around collaboration.
+242|               </p>
+243|             </div>
+244|             <div className="relative grid gap-10 md:grid-cols-3">
+245|               {/* Connector line — desktop only */}
+246|               <div
+247|                 aria-hidden="true"
+248|                 className="pointer-events-none absolute left-[calc(16.66%+16px)] right-[calc(16.66%+16px)] top-12 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block"
+249|               />
+250|               {siteContent.process.map((step, idx) => {
+251|                 const Icon = stepIcons[idx];
+252|                 return (
+253|                   <div key={step.step} className="relative text-center">
+254|                     <div className="mx-auto mb-6 flex h-24 w-24 items-center justify-center rounded-full border-2 border-border bg-background">
+255|                       <Icon className="h-8 w-8 text-brand" />
+256|                     </div>
+257|                     <div className="mb-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand text-[11px] font-bold text-brand-foreground">
+258|                       {step.step}
+259|                     </div>
+260|                     <h3 className="font-serif text-lg font-semibold">{step.title}</h3>
+261|                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+262|                       {step.description}
+263|                     </p>
+264|                   </div>
+265|                 );
+266|               })}
+267|             </div>
+268|           </div>
+269|         </section>
+270| 
+271|         {/* ─── FAQ ─── */}
+272|         <section id="faq" className="scroll-mt-24 border-b border-border/40">
+273|           <div className="mx-auto max-w-3xl px-6 py-20 md:py-28">
+274|             <div className="mb-14 text-center">
+275|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+276|                 Questions
+277|               </Badge>
+278|               <h2 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+279|                 Frequently asked
+280|               </h2>
+281|             </div>
+282|             <div className="space-y-4">
+283|               {siteContent.faq.map((item) => (
+284|                 <details
+285|                   key={item.q}
+286|                   className="group cursor-pointer rounded-xl border border-border bg-background p-5 transition-colors hover:border-border/80"
+287|                 >
+288|                   <summary className="flex items-center justify-between gap-4 text-sm font-medium">
+289|                     {item.q}
+290|                     <svg
+291|                       width="16"
+292|                       height="16"
+293|                       viewBox="0 0 24 24"
+294|                       fill="none"
+295|                       stroke="currentColor"
+296|                       strokeWidth="2"
+297|                       className="shrink-0 transition-transform group-open:rotate-180"
+298|                     >
+299|                       <path d="M6 9l6 6 6-6" />
+300|                     </svg>
+301|                   </summary>
+302|                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+303|                     {item.a}
+304|                   </p>
+305|                 </details>
+306|               ))}
+307|             </div>
+308|           </div>
+309|         </section>
+310| 
+311|         {/* ─── Inquiry Form ─── */}
+312|         <section id="inquiry" className="scroll-mt-24">
+313|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+314|             <div className="mx-auto max-w-xl text-center">
+315|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+316|                 Get started
+317|               </Badge>
+318|               <h2 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+319|                 Book your commission
+320|               </h2>
+321|               <p className="mt-3 text-muted-foreground">
+322|                 Tell me about your idea and I'll send you a quote within 24 hours.
+323|               </p>
+324|             </div>
+325|             <form
+326|               onSubmit={handleSubmit}
+327|               className="mx-auto mt-12 max-w-lg space-y-6"
+328|             >
+329|               <div className="space-y-2">
+330|                 <Label htmlFor="pkg">Selected package</Label>
+331|                 <div className="flex flex-wrap gap-2">
+332|                   {siteContent.packages.map((pkg) => (
+333|                     <Button
+334|                       key={pkg.id}
+335|                       type="button"
+336|                       variant={selected === pkg.id ? "default" : "outline"}
+337|                       size="sm"
+338|                       onClick={() => setSelected(pkg.id)}
+339|                     >
+340|                       {pkg.name} — ${pkg.price}
+341|                     </Button>
+342|                   ))}
+343|                   {selected && (
+344|                     <Button
+345|                       type="button"
+346|                       variant="ghost"
+347|                       size="sm"
+348|                       onClick={() => setSelected(null)}
+349|                       className="text-muted-foreground"
+350|                     >
+351|                       Clear
+352|                     </Button>
+353|                   )}
+354|                 </div>
+355|               </div>
+356|               <div className="space-y-2">
+357|                 <Label htmlFor="name">Your name</Label>
+358|                 <Input
+359|                   id="name"
+360|                   placeholder="e.g. Alex Rivera"
+361|                   value={form.name}
+362|                   onChange={(e) => setForm({ ...form, name: e.target.value })}
+363|                   required
+364|                 />
+365|               </div>
+366|               <div className="space-y-2">
+367|                 <Label htmlFor="email">Email</Label>
+368|                 <Input
+369|                   id="email"
+370|                   type="email"
+371|                   placeholder="alex@example.com"
+372|                   value={form.email}
+373|                   onChange={(e) => setForm({ ...form, email: e.target.value })}
+374|                   required
+375|                 />
+376|               </div>
+377|               <div className="space-y-2">
+378|                 <Label htmlFor="details">Tell me about your idea</Label>
+379|                 <Textarea
+380|                   id="details"
+381|                   placeholder="Describe the characters, mood, references, or any inspiration you have..."
+382|                   rows={5}
+383|                   value={form.details}
+384|                   onChange={(e) => setForm({ ...form, details: e.target.value })}
+385|                 />
+386|               </div>
+387|               <Button type="submit" size="lg" className="w-full" disabled={sending}>
+388|                 {sending ? "Sending…" : "Send inquiry"}
+389|               </Button>
+390|               <p className="text-center text-xs text-muted-foreground">
+391|                 No payment needed yet. I'll confirm availability and share a quote first.
+392|               </p>
+393|             </form>
+394|           </div>
+395|         </section>
+396|       </main>
+397| 
+398|       {/* ─── Footer ─── */}
+399|       <footer className="border-t border-border/40 bg-muted/30">
+400|         <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-10 text-center text-sm text-muted-foreground">
+401|           <span className="font-serif text-base font-semibold text-foreground">
+402|             {siteContent.appName}
+403|           </span>
+404|           <p>&copy; {new Date().getFullYear()} {siteContent.artist.name}. All rights reserved.</p>
+405|           <p className="text-xs">
+406|             Hand-drawn with care &middot; Built for collaboration &middot; Made in {siteContent.artist.location}
+407|           </p>
+408|         </div>
+409|       </footer>
+410|     </div>
+411|   );
+412| }
+413| 
+
+[End of file: 413 lines]
+</content>

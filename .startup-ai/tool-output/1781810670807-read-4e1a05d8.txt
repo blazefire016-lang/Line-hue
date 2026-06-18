@@ -1,0 +1,86 @@
+<path requested="src/pages/Index.tsx" resolved="src/pages/Index.tsx"></path>
+<type>file</type>
+<content>
+ 76|         <section className="relative overflow-hidden border-b border-border/40">
+ 77|           {/* Decorative blobs */}
+ 78|           <div
+ 79|             aria-hidden="true"
+ 80|             className="pointer-events-none absolute -right-32 -top-32 h-[500px] w-[500px] rounded-full bg-brand/5 blur-3xl"
+ 81|           />
+ 82|           <div
+ 83|             aria-hidden="true"
+ 84|             className="pointer-events-none absolute -bottom-48 left-1/3 h-[400px] w-[400px] rounded-full bg-brand/5 blur-3xl"
+ 85|           />
+ 86| 
+ 87|           <div className="mx-auto max-w-6xl px-6 pb-24 pt-24 md:pb-32 md:pt-32">
+ 88|             <div className="mx-auto max-w-3xl text-center">
+ 89|               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-muted/50 px-4 py-1.5 text-xs font-medium text-muted-foreground">
+ 90|                 <Clock className="h-3.5 w-3.5" />
+ 91|                 <span>Accepting limited commissions through March</span>
+ 92|               </div>
+ 93|               <h1 className="font-serif text-4xl font-bold leading-tight tracking-tight md:text-6xl lg:text-7xl">
+ 94|                 {siteContent.tagline}
+ 95|               </h1>
+ 96|               <p className="mt-6 text-balance text-base leading-relaxed text-muted-foreground md:text-lg">
+ 97|                 {siteContent.description}
+ 98|               </p>
+ 99|               <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+100|                 <Button size="lg" className="w-full sm:w-auto" asChild>
+101|                   <a href="#packages">
+102|                     {siteContent.primaryCta}
+103|                     <ArrowRight className="ml-2 h-4 w-4" />
+104|                   </a>
+105|                 </Button>
+106|                 <Button size="lg" variant="outline" className="w-full sm:w-auto">
+107|                   {siteContent.secondaryCta}
+108|                 </Button>
+109|               </div>
+110|               <p className="mt-8 text-xs text-muted-foreground">
+111|                 <Shield className="mr-1 inline-block h-3 w-3" />
+112|                 Secure payment &middot; Satisfaction guaranteed &middot; Full commercial rights
+113|               </p>
+114|             </div>
+115|           </div>
+116|         </section>
+117| 
+118|         {/* ─── Artist intro ─── */}
+119|         <section className="border-b border-border/40 bg-muted/20">
+120|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+121|             <div className="mx-auto max-w-2xl text-center">
+122|               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand/10">
+123|                 <Palette className="h-7 w-7 text-brand" />
+124|               </div>
+125|               <h2 className="font-serif text-2xl font-semibold tracking-tight md:text-3xl">
+126|                 Hi, I'm {siteContent.artist.name}
+127|               </h2>
+128|               <p className="mt-1 text-sm text-muted-foreground">{siteContent.artist.title}</p>
+129|               <p className="mt-5 text-balance leading-relaxed text-muted-foreground">
+130|                 {siteContent.artist.bio}
+131|               </p>
+132|               <p className="mt-4 text-xs text-muted-foreground">Based in {siteContent.artist.location}</p>
+133|             </div>
+134|           </div>
+135|         </section>
+136| 
+137|         {/* ─── Packages ─── */}
+138|         <section id="packages" className="scroll-mt-24 border-b border-border/40">
+139|           <div className="mx-auto max-w-6xl px-6 py-20 md:py-28">
+140|             <div className="mx-auto mb-14 max-w-xl text-center">
+141|               <Badge variant="outline" className="mb-4 border-brand/30 text-brand">
+142|                 Pricing
+143|               </Badge>
+144|               <h2 className="font-serif text-3xl font-semibold tracking-tight md:text-4xl">
+145|                 Commission packages
+146|               </h2>
+147|               <p className="mt-3 text-muted-foreground">
+148|                 Choose the tier that fits your project. All prices in {siteContent.packages[0].currency}.
+149|               </p>
+150|             </div>
+151|             <div className="grid gap-6 md:grid-cols-3">
+152|               {siteContent.packages.map((pkg) => (
+153|                 <Card
+154|                   key={pkg.id}
+155|                   className={`relative flex flex-col transition-all duration-300 ${
+
+[Showing lines 76-155 of 413. Use offset=155 to continue.]
+</content>

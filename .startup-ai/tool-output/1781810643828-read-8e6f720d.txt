@@ -1,0 +1,92 @@
+<path requested="src/index.css" resolved="src/index.css"></path>
+<type>file</type>
+<content>
+ 1| @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+ 2| 
+ 3| @tailwind base;
+ 4| @tailwind components;
+ 5| @tailwind utilities;
+ 6| 
+ 7| @layer base {
+ 8|   :root {
+ 9|     --background: 40 30% 97%;
+10|     --foreground: 0 0% 11%;
+11|     --card: 40 30% 98%;
+12|     --card-foreground: 0 0% 11%;
+13|     --popover: 40 30% 98%;
+14|     --popover-foreground: 0 0% 11%;
+15|     --primary: 15 55% 55%;
+16|     --primary-foreground: 0 0% 98%;
+17|     --secondary: 40 20% 90%;
+18|     --secondary-foreground: 0 0% 11%;
+19|     --muted: 40 15% 92%;
+20|     --muted-foreground: 0 0% 40%;
+21|     --accent: 15 50% 92%;
+22|     --accent-foreground: 0 0% 11%;
+23|     --destructive: 0 84% 60%;
+24|     --destructive-foreground: 0 0% 98%;
+25|     --border: 40 15% 84%;
+26|     --input: 40 15% 84%;
+27|     --ring: 15 55% 55%;
+28|     --radius: 0.75rem;
+29|   }
+30| 
+31|   .dark {
+32|     --background: 0 0% 7%;
+33|     --foreground: 0 0% 95%;
+34|     --card: 0 0% 10%;
+35|     --card-foreground: 0 0% 95%;
+36|     --popover: 0 0% 10%;
+37|     --popover-foreground: 0 0% 95%;
+38|     --primary: 15 55% 52%;
+39|     --primary-foreground: 0 0% 98%;
+40|     --secondary: 0 0% 15%;
+41|     --secondary-foreground: 0 0% 95%;
+42|     --muted: 0 0% 13%;
+43|     --muted-foreground: 0 0% 63%;
+44|     --accent: 15 30% 18%;
+45|     --accent-foreground: 0 0% 95%;
+46|     --destructive: 0 62% 30%;
+47|     --destructive-foreground: 0 0% 95%;
+48|     --border: 0 0% 18%;
+49|     --input: 0 0% 18%;
+50|     --ring: 15 55% 52%;
+51|   }
+52| }
+53| 
+54| @layer base {
+55|   * {
+56|     @apply border-border;
+57|   }
+58|   body {
+59|     @apply bg-background text-foreground;
+60|     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+61|     -webkit-font-smoothing: antialiased;
+62|     -moz-osx-font-smoothing: grayscale;
+63|   }
+64| }
+65| 
+66| /* Smooth scrolling */
+67| html {
+68|   scroll-behavior: smooth;
+69| }
+70| /* Styled details marker */
+71| details summary::-webkit-details-marker {
+72|   display: none;
+73| }
+74| 
+75| /* Focus ring for better a11y */
+76| :focus-visible {
+77|   outline: 2px solid hsl(15 55% 55%);
+78|   outline-offset: 2px;
+79| }
+80| 
+81| /* Selection color */
+82| ::selection {
+83|   background-color: hsl(15 55% 55% / 0.2);
+84|   color: inherit;
+85| }
+86| 
+
+[End of file: 86 lines]
+</content>

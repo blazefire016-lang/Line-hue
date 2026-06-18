@@ -1,0 +1,63 @@
+# Skill: frontend-design@1.0.0
+
+---
+name: frontend-design
+version: 1.0.0
+workspace_agent: true
+description: Create distinctive, production-grade frontend interfaces with high design quality. Use this skill when the user asks to build web components, pages, or applications. Generates creative, polished code that avoids generic AI aesthetics.
+license: Complete terms in LICENSE.txt
+triggers:
+  - frontend
+  - design
+  - landing page
+  - dashboard
+  - component
+  - redesign
+  - visual polish
+risk_level: low
+---
+
+This skill guides creation of distinctive, production-grade frontend interfaces that avoid generic "AI slop" aesthetics. Implement real working code with exceptional attention to aesthetic details and creative choices.
+
+The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
+
+## Design Thinking
+
+Before writing the main UI files, define a short **Visual Direction Brief** and build from it. Do not spend a separate planning turn on this unless the user asked for options; make the decision quickly and express it through the app's tokens, layout, components, and copy.
+
+The brief must answer:
+- **Purpose**: What problem does this interface solve? Who uses it?
+- **Tone**: Choose one concrete direction that fits the domain, such as utilitarian operations, playful consumer, technical developer-tool, dense financial, calm healthcare, industrial logistics, cinematic entertainment, luxury editorial, craft marketplace, or retro-futuristic. These are examples, not a menu to repeat.
+- **Palette**: Use 3-5 colors total: one primary brand color, 2-3 neutrals, and 1-2 accents. Avoid prominent purple/violet unless the user asks for it or the domain strongly supports it.
+- **Typography**: Use at most 2 font families. Pick type for the product's voice, not novelty. Do not default to a high-contrast editorial serif unless the product actually calls for that mood.
+- **Layout pattern**: Choose a structure that matches the product, such as dense app shell, split workbench, product-led hero, catalog grid, map/list, timeline, canvas, dashboard, or focused form flow.
+- **Shape and surface system**: Decide radius, borders, shadows, density, and control style so components feel intentionally related.
+- **Responsive behavior**: Build mobile-responsive layouts with stable touch targets and readable text, but do not over-optimize around mobile at the expense of the main product experience.
+- **Differentiation**: Name the one visual or interaction idea that makes this specific interface memorable.
+
+**CRITICAL**: Use a positive direction, not a ban list. If a familiar default appears (warm paper background, oversized centered serif hero, coral/orange pill CTA, generic SaaS gradient, frosted card stack), either justify it from the user's domain or choose a different concrete direction. The goal is variety through specificity, not avoiding one theme by falling into another.
+
+Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
+
+Then implement working code (HTML/CSS/JS, React, Vue, etc.) that is:
+- Production-grade and functional
+- Visually striking and memorable
+- Cohesive with a clear aesthetic point-of-view
+- Meticulously refined in every detail
+
+## Frontend Aesthetics Guidelines
+
+Focus on:
+- **Typography**: Choose fonts that are beautiful, unique, and interesting. Avoid generic fonts like Arial and Inter; opt instead for distinctive choices that elevate the frontend's aesthetics; unexpected, characterful font choices. Pair a distinctive display font with a refined body font.
+- **Color & Theme**: Commit to a cohesive aesthetic. Use CSS variables for consistency. Keep the core color system tight (3-5 colors total), with contrast checked whenever a background changes.
+- **Motion**: Use animations for effects and micro-interactions. Prioritize CSS-only solutions for HTML. Use Motion library for React when available. Focus on high-impact moments: one well-orchestrated page load with staggered reveals (animation-delay) creates more delight than scattered micro-interactions. Use scroll-triggering and hover states that surprise.
+- **Spatial Composition**: Pick a layout strategy that fits the product workflow. Use asymmetry, overlap, diagonal flow, grid-breaking elements, generous negative space, or controlled density only when they serve the brief.
+- **Backgrounds & Visual Details**: Create atmosphere and depth without decorative filler. Prefer solid surfaces, product-relevant images/media, useful patterns, crisp borders, or meaningful texture. Use gradients sparingly and purposefully; avoid abstract blobs/orbs as a default.
+
+NEVER use generic AI-generated aesthetics like overused font families (Inter, Roboto, Arial, system fonts), cliched color schemes (particularly purple gradients on white backgrounds), predictable layouts and component patterns, and cookie-cutter design that lacks context-specific character.
+
+Interpret creatively and make unexpected choices that feel genuinely designed for the context. No design should be the same. Vary between light and dark themes, type systems, layout patterns, density, and interaction models. NEVER converge on common choices (Space Grotesk, for example) across generations.
+
+**IMPORTANT**: Match implementation complexity to the aesthetic vision. Maximalist designs need elaborate code with extensive animations and effects. Minimalist or refined designs need restraint, precision, and careful attention to spacing, typography, and subtle details. Elegance comes from executing the vision well.
+
+Remember: Codex is capable of extraordinary creative work. Don't hold back, show what can truly be created when thinking outside the box and committing fully to a distinctive vision.
