@@ -1,0 +1,129 @@
+<path requested="src/data/siteContent.ts" resolved="src/data/siteContent.ts"></path>
+<type>file</type>
+<content>
+  1| export const siteContent = {
+  2|   appName: "Line & Hue",
+  3|   tagline: "Custom anime sketches, logos & art commissions.",
+  4|   description:
+  5|     "From anime character art and original designs to clean vector logos — I craft custom artwork that fits your style and story.",
+  6|   primaryCta: "Book a commission",
+  7|   secondaryCta: "See packages",
+  8| 
+  9|   artist: {
+ 10|     name: "Blaze",
+ 11|     title: "Custom anime sketch & logo artist",
+ 12|     bio: "Specializing in anime-style character art, custom logos, and original illustrations. Whether you need a striking avatar for your stream, a logo for your brand, or a full character sheet for your project — every commission starts with understanding what you're envisioning.",
+ 13|     avatar: "",
+ 14|     location: "Remote",
+ 15|   },
+ 16| 
+ 17|   packages: [
+ 18|     {
+ 19|       id: "logo",
+ 20|       name: "Logo Design",
+ 21|       price: 5,
+ 22|       currency: "USD",
+ 23|       description: "Custom vector logo tailored to your brand — anime-inspired or clean modern style.",
+ 24|       delivery: "5–8 days",
+ 25|       size: "Vector (SVG / AI / EPS)",
+ 26|       revisions: 3,
+ 27|       features: [
+ 28|         "Vector format (SVG, AI, EPS)",
+ 29|         "Full color palette exploration",
+ 30|         "Commercial use + trademark rights",
+ 31|         "Source files included",
+ 32|         "Social media kit included",
+ 33|       ],
+ 34|     },
+ 35|     {
+ 36|       id: "sketch",
+ 37|       name: "Custom Anime Sketch (Digital NFT)",
+ 38|       price: 15,
+ 39|       currency: "USD",
+ 40|       description: "Clean black-and-white anime sketch delivered as a digital NFT — perfect for collectors, profile pics, and character concepts.",
+ 41|       delivery: "2 days",
+ 42|       size: "High-res digital (NFT-ready)",
+ 43|       revisions: 1,
+ 44|       features: [
+ 45|         "High-res digital scan (2400+ px)",
+ 46|         "Clean lineart, grayscale",
+ 47|         "NFT-compatible format",
+ 48|         "Blockchain-ready metadata",
+ 49|         "Personal use",
+ 50|       ],
+ 51|     },
+ 52|     {
+ 53|       id: "art",
+ 54|       name: "Custom Anime Art (Physical Copy)",
+ 55|       price: 20,
+ 56|       currency: "USD",
+ 57|       description: "Detailed anime-style art delivered as a physical print — signed, framed-ready, and shipped to your door.",
+ 58|       delivery: "4–5 days",
+ 59|       size: '8.5" × 11" print',
+ 60|       revisions: 2,
+ 61|       features: [
+ 62|         "Full-detail inked illustration",
+ 63|         "High-quality print on premium paper",
+ 64|         "Signed by the artist",
+ 65|         "Shipped in protective packaging",
+ 66|         "Digital copy included",
+ 67|       ],
+ 68|     },
+ 69|   ],
+ 70| 
+ 71|   process: [
+ 72|     {
+ 73|       step: 1,
+ 74|       title: "Share your idea",
+ 75|       description:
+ 76|         "Tell me what you need — character refs, mood boards, logo concepts, or just a description. I'll ask the right questions to nail the direction.",
+ 77|     },
+ 78|     {
+ 79|       step: 2,
+ 80|       title: "Roughs & revisions",
+ 81|       description:
+ 82|         "I'll send initial sketches or logo concepts. You pick what works, and I refine until it's exactly right.",
+ 83|     },
+ 84|     {
+ 85|       step: 3,
+ 86|       title: "Final delivery",
+ 87|       description:
+ 88|         "Once approved, I finish and deliver high-res files or ship your physical print. You get full usage rights with every package.",
+ 89|     },
+ 90|   ],
+ 91| 
+ 92|   faq: [
+ 93|     {
+ 94|       q: "What art styles do you do?",
+ 95|       a: "I specialize in anime and manga-inspired illustration, cel-shaded character art, and clean vector logos. I can match existing anime styles or create an original look for your project.",
+ 96|     },
+ 97|     {
+ 98|       q: "Can you design a logo for my brand?",
+ 99|       a: "Absolutely! The Logo Design package covers custom vector logos — mascot-style, typographic, or emblem. I'll explore color palettes and deliver editable source files ready for web, print, and merchandise.",
+100|     },
+101|     {
+102|       q: "What's the difference between the Digital NFT and Physical Copy?",
+103|       a: "The Digital NFT package delivers a high-res grayscale sketch with blockchain-ready metadata — perfect for collectors and digital display. The Physical Copy is a fully inked illustration printed on premium paper, signed, and shipped to you. Both include a digital copy.",
+104|     },
+105|     {
+106|       q: "How do I receive my commission?",
+107|       a: "Digital files are delivered via email or Google Drive in high-resolution PNG format. Physical prints are shipped in protective packaging with tracking included.",
+108|     },
+109|     {
+110|       q: "Can I use the art commercially?",
+111|       a: "The Logo Design package includes full commercial and trademark rights. Anime sketch and art packages include personal use rights — commercial licensing can be discussed for an additional fee.",
+112|     },
+113|     {
+114|       q: "How do revisions work?",
+115|       a: "Each package includes revision rounds during the sketch/concept phase. Minor tweaks after final delivery are free; major reworks are quoted separately.",
+116|     },
+117|     {
+118|       q: "What about payment?",
+119|       a: "I send a secure invoice via Stripe. A 50% deposit is required to start, with the balance due on final delivery.",
+120|     },
+121|   ],
+122| };
+123| 
+
+[End of file: 123 lines]
+</content>

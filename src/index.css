@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 15% 97%;
+    --foreground: 240 10% 10%;
+    --card: 230 15% 99%;
+    --card-foreground: 240 10% 10%;
+    --popover: 230 15% 99%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 330 65% 52%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 330 20% 90%;
+    --secondary-foreground: 240 10% 10%;
+    --muted: 230 10% 93%;
+    --muted-foreground: 240 5% 40%;
+    --accent: 330 45% 93%;
+    --accent-foreground: 240 10% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 230 10% 85%;
+    --input: 230 10% 85%;
+    --ring: 330 65% 52%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 240 10% 7%;
+    --foreground: 0 0% 95%;
+    --card: 240 10% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 240 10% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 330 60% 55%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 8% 15%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 240 8% 13%;
+    --muted-foreground: 240 5% 63%;
+    --accent: 330 30% 18%;
+    --accent-foreground: 0 0% 95%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+    --border: 240 8% 18%;
+    --input: 240 8% 18%;
+    --ring: 330 60% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+/* Styled details marker */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Focus ring for better a11y */
+:focus-visible {
+  outline: 2px solid hsl(330 65% 52%);
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: hsl(15 55% 55% / 0.2);
+  color: inherit;
+}
